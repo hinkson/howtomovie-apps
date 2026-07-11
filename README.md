@@ -42,4 +42,4 @@ separate GitHub Pages repo with `publish-htm-site.sh` at the monorepo root:
 ```
 
 The push step uses GitHub Desktop's credential (Claude's shell can't authenticate to
-github.com) — run the script to sync + commit, then click **Push** in GitHub Desktop.
+github.com); run the script to sync + commit, then click **Push** in GitHub Desktop.

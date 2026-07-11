@@ -140,7 +140,7 @@ a {
   max-width: 680px;
 }
 
-/* App names like "HowToMovie2" are long single words — keep the hero title
+/* App names like "HowToMovie2" are long single words, so keep the hero title
    from overflowing its column (and sliding under the phone). */
 .hero-copy h1 {
   font-size: clamp(2.6rem, 6vw, 4.8rem);
