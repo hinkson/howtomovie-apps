@@ -16,6 +16,7 @@
   --coral: #ec6a5a;
   --blue: #6f8bf0;
   --rose: #e578a0;
+  --green: #21b366;
   --gold-gradient: linear-gradient(135deg, #f0cf7c, #d9a441 55%, #b7822a);
   --shadow: 0 26px 64px rgba(0, 0, 0, 0.6);
   --max: 1120px;
@@ -604,6 +605,10 @@ h3 {
   background: var(--coral);
 }
 
+.mark-green {
+  background: var(--green);
+}
+
 .mark-ink {
   background: linear-gradient(135deg, #6b6252, #362f24);
 }
@@ -867,6 +872,10 @@ h3 {
   border-top-color: var(--coral);
 }
 
+.app-card--deals {
+  border-top-color: var(--green);
+}
+
 .app-card-head {
   display: flex;
   align-items: center;
@@ -972,6 +981,36 @@ h3 {
 .theme-builder .site-nav a:focus-visible,
 .theme-builder .site-nav a[aria-current="page"] {
   color: #f7a99b;
+}
+
+/* ---- Deal Hunter green accent variant ---- */
+.theme-deals .button-primary {
+  background: linear-gradient(135deg, #4fd68f, #1a9455);
+  color: #062012;
+  box-shadow: 0 14px 28px rgba(26, 148, 85, 0.28);
+}
+
+.theme-deals .button-primary:hover,
+.theme-deals .button-primary:focus-visible {
+  filter: brightness(1.05);
+}
+
+.theme-deals .eyebrow,
+.theme-deals .strip-label,
+.theme-deals .text-link {
+  color: var(--green);
+}
+
+.theme-deals .hero-stats dt,
+.theme-deals .day-number,
+.theme-deals .composer-preview strong {
+  color: #7fe8ab;
+}
+
+.theme-deals .site-nav a:hover,
+.theme-deals .site-nav a:focus-visible,
+.theme-deals .site-nav a[aria-current="page"] {
+  color: #7fe8ab;
 }
 
 @media (max-width: 880px) {
