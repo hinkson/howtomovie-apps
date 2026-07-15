@@ -902,6 +902,39 @@ h3 {
   font-size: 0.92rem;
 }
 
+.app-card-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 8px 0 0;
+  border-radius: 999px;
+  padding: 3px 10px;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.app-card-status::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.app-card-status--live {
+  border: 1px solid rgba(33, 179, 102, 0.4);
+  background: rgba(33, 179, 102, 0.12);
+  color: #7fe8ab;
+}
+
+.app-card-status--soon {
+  border: 1px solid var(--line-soft);
+  background: var(--panel-strong);
+  color: var(--muted);
+}
+
 .app-card-desc {
   color: var(--muted);
   font-size: 1.02rem;
