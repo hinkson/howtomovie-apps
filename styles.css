@@ -17,6 +17,8 @@
   --blue: #6f8bf0;
   --rose: #e578a0;
   --green: #21b366;
+  --terracotta: #c06a3f;
+  --terracotta-bright: #dd9166;
   --gold-gradient: linear-gradient(135deg, #f0cf7c, #d9a441 55%, #b7822a);
   --shadow: 0 26px 64px rgba(0, 0, 0, 0.6);
   --max: 1120px;
@@ -886,6 +888,10 @@ h3 {
   border-top-color: var(--green);
 }
 
+.app-card--books {
+  border-top-color: var(--terracotta);
+}
+
 .app-card-head {
   display: flex;
   align-items: center;
@@ -1054,6 +1060,35 @@ h3 {
 .theme-deals .site-nav a:focus-visible,
 .theme-deals .site-nav a[aria-current="page"] {
   color: #7fe8ab;
+}
+
+.theme-books .button-primary {
+  background: linear-gradient(135deg, #dd9166, #b4603a 55%, #96491f);
+  color: #1c0f07;
+  box-shadow: 0 14px 28px rgba(180, 96, 58, 0.28);
+}
+
+.theme-books .button-primary:hover,
+.theme-books .button-primary:focus-visible {
+  filter: brightness(1.05);
+}
+
+.theme-books .eyebrow,
+.theme-books .strip-label,
+.theme-books .text-link {
+  color: var(--terracotta-bright);
+}
+
+.theme-books .hero-stats dt,
+.theme-books .day-number,
+.theme-books .composer-preview strong {
+  color: var(--terracotta-bright);
+}
+
+.theme-books .site-nav a:hover,
+.theme-books .site-nav a:focus-visible,
+.theme-books .site-nav a[aria-current="page"] {
+  color: var(--terracotta-bright);
 }
 
 @media (max-width: 880px) {
