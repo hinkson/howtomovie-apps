@@ -3,22 +3,30 @@
 A static "studio" website (**HTM Apps**) for the How To Movie family of apps. It can be
 hosted for free on GitHub Pages, Cloudflare Pages, Netlify, or any static host.
 
-It starts with **How To Movie** (the rating-predictor app, live on the App Store) and
-**How To TV** (coming soon); more HTM-family apps (Deal Hunter, Image Builder, Review
-Writer) can be added later as extra cards on `index.html`.
+Five apps have cards on `index.html`:
+
+| App | Page slug | Status |
+| --- | --- | --- |
+| How To Movie | `howtomovie2` | Live on the App Store |
+| How To TV | `how-to-tv` | Live on the App Store |
+| Next Chapter | `nextchapter` | Coming soon |
+| Movie Canvas | `htm-image-builder` | Coming soon |
+| Deal Hunter | `deal-hunter` | Coming soon |
 
 ## Pages
 
-- `index.html`: studio landing page (the apps grid)
-- `howtomovie2.html` / `how-to-tv.html`: per-app detail pages
-- `howtomovie2-support.html` / `how-to-tv-support.html`: App Store support URL candidates
-- `howtomovie2-privacy.html` / `how-to-tv-privacy.html`: App Store privacy policy URL candidates
+Every app has three pages — `<slug>.html` (product), `<slug>-support.html` (App Store
+support URL) and `<slug>-privacy.html` (App Store privacy policy URL) — plus
+`index.html`, the studio landing page.
 
-(The `howtomovie2*` filenames are kept stable as URLs; the app is displayed as "How To Movie".)
+Two slugs deliberately differ from the display name and are kept stable as URLs:
+`howtomovie2` is "How To Movie", and `htm-image-builder` is "Movie Canvas".
 
 ## Notes
 
-- Support currently routes to `thehowtomovie.com`; swap in a direct support email once chosen.
+- Support routes to `thehowtomovie.com`, except the Next Chapter pages, which use the
+  `support.altaaffirmations@gmail.com` inbox shared with the other two studio sites.
+- Coming-soon pages carry a placeholder button; swap in the real App Store link at launch.
 - If using a custom domain, add a `CNAME` file with that domain.
 
 ## Local Preview
