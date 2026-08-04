@@ -10,7 +10,7 @@ Five apps have cards on `index.html`:
 | How To Movie | `howtomovie2` | Live on the App Store |
 | How To TV | `how-to-tv` | Live on the App Store |
 | Next Chapter | `nextchapter` | Coming soon |
-| Movie Canvas | `htm-image-builder` | Coming soon |
+| Movie Canvas | `htm-image-builder` | Live on the App Store |
 | Deal Hunter | `deal-hunter` | Coming soon |
 
 ## Pages
