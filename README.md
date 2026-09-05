@@ -24,8 +24,12 @@ Two slugs deliberately differ from the display name and are kept stable as URLs:
 
 ## Notes
 
-- Support routes to `thehowtomovie.com`, except the Next Chapter pages, which use the
-  `support.altaaffirmations@gmail.com` inbox shared with the other two studio sites.
+- Support routes to `thehowtomovie.com`, with two exceptions. The Next Chapter pages use
+  the `support.altaaffirmations@gmail.com` inbox shared with the other two studio sites.
+  The Deal Hunter pages use `htm.dealhunter@gmail.com`, an inbox of its own — it is
+  per-app, not the shared address, so do not reuse it for another app. Both the support
+  and privacy pages carry it, and the canonical WordPress copies must be changed to match
+  (`support_email` on the app's entry in `HTM Website/content/apps.json`).
 - Coming-soon pages carry a placeholder button; swap in the real App Store link at launch.
 - If using a custom domain, add a `CNAME` file with that domain.
 
