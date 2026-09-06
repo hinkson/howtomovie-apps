@@ -1,14 +1,14 @@
 # HTM Apps Website
 
-A static "studio" website (**HTM Apps**) for the How To Movie family of apps. It can be
+A static "studio" website (**HTM Apps**) for the How to Movie family of apps. It can be
 hosted for free on GitHub Pages, Cloudflare Pages, Netlify, or any static host.
 
 Five apps have cards on `index.html`:
 
 | App | Page slug | Status |
 | --- | --- | --- |
-| How To Movie | `howtomovie2` | Live on the App Store |
-| How To TV | `how-to-tv` | Live on the App Store |
+| How to Movie | `howtomovie2` | Live on the App Store |
+| How to TV | `how-to-tv` | Live on the App Store |
 | Next Chapter | `nextchapter` | Coming soon |
 | Movie Canvas | `htm-image-builder` | Live on the App Store |
 | Deal Hunter | `deal-hunter` | Coming soon |
@@ -20,7 +20,7 @@ support URL) and `<slug>-privacy.html` (App Store privacy policy URL) — plus
 `index.html`, the studio landing page.
 
 Two slugs deliberately differ from the display name and are kept stable as URLs:
-`howtomovie2` is "How To Movie", and `htm-image-builder` is "Movie Canvas".
+`howtomovie2` is "How to Movie", and `htm-image-builder` is "Movie Canvas".
 
 ## Notes
 
