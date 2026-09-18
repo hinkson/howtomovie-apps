@@ -1,57 +1,40 @@
-# HTM Apps Website
+# HTM Apps Website (retired: redirects only)
 
-A static "studio" website (**HTM Apps**) for the How to Movie family of apps. It can be
-hosted for free on GitHub Pages, Cloudflare Pages, Netlify, or any static host.
+**Since 2026-09-18 every page here is a redirect to its twin on
+`thehowtomovie.com/apps/`.** Do not edit these pages on a release. The real
+pages are built from `HTM Website/content/apps.json` by
+`HTM Website/tools/build_app_pages.py`.
 
-Five apps have cards on `index.html`:
+## Why it is still published
 
-| App | Page slug | Status |
-| --- | --- | --- |
-| How to Movie | `howtomovie2` | Live on the App Store |
-| How to TV | `how-to-tv` | Live on the App Store |
-| Next Chapter | `nextchapter` | Live on the App Store |
-| Movie Canvas | `htm-image-builder` | Live on the App Store |
-| Deal Hunter | `deal-hunter` | Live on the App Store |
+Every HTM app's App Store fields and in-app links point at thehowtomovie.com now,
+but older installed builds (How to Movie 1.6 and earlier, Movie Canvas before its
+link change) still open these URLs for support and privacy. Deleting the site
+would break those links, and one of them is a privacy policy. A redirect keeps
+them working and leaves nothing to maintain.
 
-## Pages
+## What is here
 
-Every app has three pages — `<slug>.html` (product), `<slug>-support.html` (App Store
-support URL) and `<slug>-privacy.html` (App Store privacy policy URL) — plus
-`index.html`, the studio landing page.
+| File | Status |
+| --- | --- |
+| `*.html` (16 pages) | Redirect stubs, written by `HTM Site/make_redirects.py`. Each keeps its canonical, its title and its `apple-itunes-app` banner tag |
+| `assets/` | **Still load-bearing.** `ICON_DIR` for `HTM Website/tools/upload_media.py`, and the icon source for `HTM Marketing` |
+| `styles.css` | **Still load-bearing.** The canonical `:root` brand tokens that ReelKit, the website theme and several app icon generators copy |
+| `nextchapter-demo-library.csv` | **Still load-bearing.** Linked from Next Chapter's App Review notes |
 
-Two slugs deliberately differ from the display name and are kept stable as URLs:
-`howtomovie2` is "How to Movie", and `htm-image-builder` is "Movie Canvas".
+Two page slugs differ from the app's name and the twin's slug: `howtomovie2` is
+How to Movie (`/apps/how-to-movie/`), and `htm-image-builder` is Movie Canvas
+(`/apps/movie-canvas/`).
 
-## Notes
+## Changing a redirect
 
-- Support routes to `thehowtomovie.com`, with two exceptions. The Next Chapter pages use
-  the `support.altaaffirmations@gmail.com` inbox shared with the other two studio sites.
-  The Deal Hunter pages use `htm.dealhunter@gmail.com`, an inbox of its own — it is
-  per-app, not the shared address, so do not reuse it for another app. Both the support
-  and privacy pages carry it, and the canonical WordPress copies must be changed to match
-  (`support_email` on the app's entry in `HTM Website/content/apps.json`).
-- Coming-soon pages carry a placeholder button; swap in the real App Store link at launch.
-- If using a custom domain, add a `CNAME` file with that domain.
-
-## Local Preview
-
-From this folder's parent (`HTM Site`):
+Each stub reads its target from its own `<link rel="canonical">`, so to point a
+page somewhere else, change that tag and re-run:
 
 ```sh
-python3 -m http.server 8080 -d docs
+python3 "HTM Site/make_redirects.py"           # report
+python3 "HTM Site/make_redirects.py" --apply   # write (idempotent)
+./publish-htm-site.sh "msg"                    # sync + commit; the push is the owner's
 ```
 
-Then open `http://localhost:8080`.
-
-## Publishing
-
-The site's source of truth is this `docs/` folder inside the monorepo. It is published to a
-separate GitHub Pages repo with `publish-htm-site.sh` at the monorepo root:
-
-```sh
-./publish-htm-site.sh "commit message"   # sync + commit + push
-./publish-htm-site.sh --check             # dry run, no push
-```
-
-The push step uses GitHub Desktop's credential (Claude's shell can't authenticate to
-github.com); run the script to sync + commit, then click **Push** in GitHub Desktop.
+The script refuses a page with no canonical rather than guessing a target.
